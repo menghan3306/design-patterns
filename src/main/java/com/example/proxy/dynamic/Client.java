@@ -10,5 +10,6 @@ public class Client {
         ProxyFactory factory = new ProxyFactory(target);
         ITeacherDao proxyInstance =(ITeacherDao) factory.getProxyInstance();
         System.out.println("proxyInstance=" + proxyInstance.getClass());
+        proxyInstance.teach();
     }
 }

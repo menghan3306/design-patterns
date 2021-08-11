@@ -17,7 +17,7 @@ public class ProxyFactory {
     }
 
     public Object getProxyInstance(){
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getClasses(), new InvocationHandler() {
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 System.out.println("--JDK代理开始");
